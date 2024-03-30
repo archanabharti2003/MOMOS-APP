@@ -1,4 +1,11 @@
-$primary:red;
+@import './variables'; // importing variable css file to main css file
+
 body{
+    font-family: 'Lato',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    color: $dark;
+}
+
+nav li:last-child a{
     background: $primary;
 }
