@@ -1,11 +1,50 @@
 @import './variables'; // importing variable css file to main css file
 
+// Your custom styles here
+
 body{
     font-family: 'Lato',sans-serif;
     -webkit-font-smoothing:antialiased;
     color: $dark;
+    height: 4000px;
 }
 
 nav li:last-child a{
     background: $primary;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+
+//add hover
+nav li a::after{
+    content:'';
+    width:0%;
+    height: 2px;
+    background: $primary;
+    display: block;
+    margin: auto;
+    transition: $smooth;
+}
+
+nav li a:hover::after{
+    width:100%
+}
+
+section.hero{
+    background:$secondary;
+}
+
+.size{
+    background: $secondary;
+}
+.add-to-cart{
+    border: 2px solid $primary ;
+    color: $primary;
+    &:hover{
+        background: $primary;
+        border-color: $pure;
+        color:$pure;
+        transition: $smooth;
+    }
 }
