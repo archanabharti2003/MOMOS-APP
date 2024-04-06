@@ -5,14 +5,18 @@
             <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
               Email
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Enter your email">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Enter your email "required>
           </div>
           <div class="mb-6">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
               Password
             </label>
-            <input class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your password" >
-          
+            <input class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your password" required>
+           
+            <input type="checkbox" id="rememberMe" class="appearance-none w-6 h-6 rounded-md border border-gray-300 checked:bg-orange-500 checked:border-transparent focus:outline-none">
+            <label for="rememberMe" class="ml-2 text-gray-700">Remember me</label>
+
+            
           </div>
           <div class="flex items-center justify-between">
             <button class="btn-primary rounded-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -22,6 +26,16 @@
               Don't have account?
             </a>
           </div>
+
+          <div class="mx-auto text-center py-3">
+            <span class="py-5">OR</span>
+            <div class="fingerprint w-14 mx-auto text-center py-3 border-white-300" >
+                <img src="/img/fingerprint.png" alt="">
+            </div>
+            <p class="inline-block align-baseline font-bold text-sm" >Login Using fingerprint?</p>
+          </div>
+
+
         </form>
         <p class="text-center text-gray-500 text-xs">
           &copy;All rights reserved.

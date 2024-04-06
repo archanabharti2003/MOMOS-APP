@@ -13,6 +13,7 @@
   "author": "Archana Bharti",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "ejs": "^3.1.9",
     "express": "^4.19.1",
     "express-ejs-layouts": "^2.5.1"

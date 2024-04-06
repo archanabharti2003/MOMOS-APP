@@ -75,10 +75,20 @@ section.login{
             color:$primary-hover;
         }
     }
+    p{
+        color: $primary;
+        &:hover{
+            color:$primary-hover;
+        }
+    }
 
 }
 
-
-
+section.footer1{
+    background: $primary;
+        &:hover{
+            color: $primary;
+        }
+}
 
 

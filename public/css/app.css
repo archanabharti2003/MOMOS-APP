@@ -69,5 +69,18 @@ section.login a {
 section.login a:hover {
   color: #b23301;
 }
+section.login p {
+  color: #FE5F15;
+}
+section.login p:hover {
+  color: #b23301;
+}
+
+section.footer1 {
+  background: #FE5F15;
+}
+section.footer1:hover {
+  color: #FE5F15;
+}
 
 /*# sourceMappingURL=app.css.map */
