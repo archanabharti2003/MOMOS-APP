@@ -2,11 +2,12 @@
 
 // Your custom styles here
 
+     //      sass --watch .\resources\scss\app.scss:.\public\css\app.css
+
 body{
     font-family: 'Lato',sans-serif;
     -webkit-font-smoothing:antialiased;
     color: $dark;
-    height: 4000px;
 }
 
 nav li:last-child a{
@@ -48,3 +49,36 @@ section.hero{
         transition: $smooth;
     }
 }
+
+.btn-primary{
+    background: $primary;
+    transition:$smooth;
+    &:hover {
+        background:$primary-hover;
+    }
+}
+
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $primary;
+    }
+}
+
+section.login{
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+
+    a{
+        color: $primary;
+        &:hover{
+            color:$primary-hover;
+        }
+    }
+
+}
+
+
+
+
+

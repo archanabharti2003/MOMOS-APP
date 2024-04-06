@@ -16,15 +16,31 @@ const PORT=process.env.PORT || 3300
 //Asset
 app.use(express.static('public'));
 
-//create routing
-app.get('/',(req,res)=>{
-    res.render("home");
-})
 
 //set template engine
 app.use(expressLayout);
 app.set('views',path.join(__dirname,'/resources/views'));
 app.set('view engine', 'ejs');
+
+//create routing for home page
+app.get('/',(req,res)=>{
+    res.render("home");
+})
+
+// create routing for cart page
+app.get('/cart', (req, res) => {
+    res.render("customers/cart");
+});
+
+// create routing for login page
+app.get('/login', (req, res) => {
+    res.render("auth/login");
+});
+
+// create routing for register page
+app.get('/register', (req, res) => {
+    res.render("auth/register");
+});
 
 
 app.listen(PORT,()=>{
