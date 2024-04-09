@@ -1,4 +1,4 @@
-<!--//ejs kya karta hai-- jo server se variable aata hai usko help karta hai html ke andar embedd karne me...normal html me hm ye nhi kar pate hai issiliye hm ejs use karte hai...-->
+<!--//ejs kya karta hai  jo server se variable aata hai usko help karta hai html ke andar embedd karne me...normal html me hm ye nhi kar pate hai issiliye hm ejs use karte hai...-->
 
 
 
@@ -31,126 +31,24 @@
     <!-- Menue section -->
     <section class="menu container mx-auto py-8">
         <h1 class="text-xl font-bold mb-4">All Momos</h1>
-        <div class="grid grid-cols-4 gap-4 ">
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div class="grid grid-cols-4 gap-4 row-gap-16">
 
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
+            <% momos.forEach(function(momos){ %>
+                <div class="w-64 bg-green-100 hover:bg-green-50">
+                    <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/<%=momos.image %>" alt="">
+                    <div class="text-center">
+                        <h2 class="mb-4 text-lg"><%=momos.name%></h2>
+                        <span class="size py-1 px-4 rounded-full tect-xs">Pieces:-<%=momos.pieces%></span>
+                        <div class="flex items-center justify-around mt-6">
+                            <span class="font-bold text-lg">Rs<%=momos.price%></span>
+                            <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
+                                <span>+</span>
+                                <span class="ml-4">Add</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64 bg-green-100 hover:bg-green-50">
-                <img class="h-40 mb-4 mx-auto w-full object-cover" src="/img/images.jpeg" alt="">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">veg momo</h2>
-                    <span class="size py-1 px-4 rounded-full uppercase tect-xs">small</span>
-                    <div class="flex items-center justify-around mt-6">
-                        <span class="font-bold text-lg">Rs 250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+           <% }) %>
 
         </div>
 

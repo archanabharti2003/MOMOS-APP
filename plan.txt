@@ -13,6 +13,18 @@ Create Cart page
     -Order summary section
     -empty cart section
 
+move routes to route files
+create dedicated controllers
+add to cart functionalities
+  fetch all momos from db and show on home page
+  create menu model and put dummy Data
+  -connect to mongodb
+  -use connect-mongo for session store
+    -dependencies
+      --mongoose, express-session, connect-mongo,dotenv
+
+      
+
  Create order controller and link it in server.js
  Create Orders view with table for customer and admin
  Create Orders single page with status
