@@ -1,31 +1,35 @@
+ 
+//  import axios from 'axios'
+const axios = require('axios');
+
+
+
  let addToCart = document.querySelectorAll('.add-to-cart')
+ let cartCounter = document.querySelector('#cartCounter')
 
 
-addToCart.forEach((btn)=>{
-    btn.addEventListener('click',(e)=>{
-        console.log(e)
+function updateCart(momos){
+    axios.post('./update-cart',momos).then(res=>{
+        cartCounter.innerText = res.data.totalQty;
+        // new Noty({
+        //     type: 'success',
+        //     timeout: 1000,
+        //     text: 'Item added to cart',
+        //         progressBar: false,
+        //     }).show();
+        // }).catch(err => {
+        //     new Noty({
+        //          type: 'error',
+        //         timeout: 1000,
+        //         text: 'Something went wrong',
+        //         progressBar: false,
+        //     }).show();
+    })
+}
 
-        //request to server and add momos to cart
-        let momo=JSON.parse(btn.dataset.momos)
-        console.log(momo)
-
+addToCart.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        let momos= JSON.parse(btn.dataset.momos)
+        updateCart(momos)
     })
 })
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-//     addToCartButtons.forEach(button => {
-//         button.addEventListener('click', function() {
-//             const momosData = JSON.parse(this.getAttribute('data-momos'));
-//             addToCart(momosData);
-//         });
-//     });
-
-//     function addToCart(momosData) {
-//         // Here you can implement your logic to add the momos to the cart
-//         // For example, you can send an AJAX request to a server-side script to add the momos to the cart
-//         console.log('Added to cart:', momosData);
-//     }
-// });

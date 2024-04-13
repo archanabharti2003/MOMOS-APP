@@ -1,1 +1,1 @@
-let addToCart = document.querySelectorAll('.add-to-cart')
+ import axios from 'axios'

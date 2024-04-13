@@ -15,6 +15,8 @@ function initRoutes(app){
 
     // create routing for register page
     app.get('/register', authController().register);
+
+    app.post('/update-cart',cartController().update)
 }
 
 
